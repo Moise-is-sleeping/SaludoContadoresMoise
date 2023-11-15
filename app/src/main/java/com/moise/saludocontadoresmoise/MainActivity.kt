@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.moise.saludocontadoresmoise.ui.theme.SaludoContadoresMoiseTheme
 
 class MainActivity : ComponentActivity() {
@@ -106,21 +107,39 @@ fun Dialog(): MutableList<Any> {
                         myval = it
                     })
                 Row(){
-                    Button(onClick = {
+                    Button(
+                        modifier = Modifier
+                        .height(40.dp)
+                        .width(90.dp)
+                        .padding(top = 4.dp)
+                        .padding(2.dp),
+                        shape = RectangleShape,onClick = {
                         cerrar = true
                     }) {
-                        Text(text = "Aceptar")
+                        Text(text = "Aceptar", fontSize = 9.sp)
                     }
-                    Button(onClick = {
+                    Button(
+                        modifier = Modifier
+                            .height(40.dp)
+                            .width(90.dp)
+                            .padding(top = 4.dp)
+                            .padding(2.dp),
+                        shape = RectangleShape,onClick = {
                         myval = ""
                     }) {
-                        Text(text = "Limpiar")
+                        Text(text = "Limpiar", fontSize = 9.sp)
                     }
-                    Button(onClick = {
+                    Button(
+                        modifier = Modifier
+                            .height(40.dp)
+                            .width(90.dp)
+                            .padding(top = 4.dp)
+                            .padding(2.dp),
+                        shape = RectangleShape,onClick = {
                         myval=""
                         cerrar = true
                     }) {
-                        Text(text = "Cancelar")
+                        Text(text = "Cancelar", fontSize = 9.sp)
                     }
                 }
             }
